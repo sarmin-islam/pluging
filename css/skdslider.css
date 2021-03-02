@@ -1,0 +1,159 @@
+#slider{
+  margin:0;
+  padding:0; 
+}
+
+.skdslider {
+  width:100%;
+  position: relative;
+  display: block;
+  overflow:hidden;
+}
+.skdslider .slide {
+   display: none;
+}
+.skdslider .slide img {
+   width: 100%;
+   height:100%;
+   border:0;
+}
+
+.skdslider ul.slide-navs {
+    bottom: 20px;
+    left: 50%;
+    position: absolute;
+	  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skdslider ul.slide-navs li {
+  float: left;
+	background: #fff;
+	height:6px;
+	width:6px;
+	margin-right:20px;
+	cursor:pointer;
+	border-radius: 50%;
+	position: relative;
+}
+.skdslider ul.slide-navs li::after{
+	content: '';
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: -8px;
+	left: -8px;
+}
+.skdslider ul.slide-navs li.active {
+  background: #990000;
+}
+
+.skdslider .slide-desc {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.514);
+	position: absolute;
+    bottom: 0;
+    left: 0;
+	display:inline-block;
+	text-align: center;
+}
+.skdslider .slide-desc > h2 {
+    color: #fff;
+    font-family: var(--hf);
+    font-size: 48px;
+  padding-top: 200px;
+  font-weight: 400;
+    text-transform: capitalize;
+}
+
+.skdslider .slide-desc > p {
+	color: #fff;
+    font-family: var(--hf);
+    font-size: 25px;
+  font-weight: 400;
+    text-transform: uppercase;
+}
+.skdslider .slide-desc > p a.more {
+	color:#990000;
+	  font-size:20px;
+	  text-decoration:none;
+  }
+ 
+}
+.skdslider .slide-desc > p a.more:hover {
+  text-decoration:underline;
+}
+
+.skdslider a.prev{
+  background: url("../images/left.png") no-repeat scroll 0 0 transparent;
+	width:43px;
+	height:43px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:185px;
+
+}
+
+.skdslider a.next{
+  background: url("../images/next.png") no-repeat scroll 0 0 transparent;
+	width:43px;
+	height:43px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	right:185px;
+}
+.skdslider a.prev:hover {
+  
+}
+.skdslider a.next:hover {
+  
+}
+
+.skdslider a.play {
+    background: url("../images/play.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+
+.skdslider a.pause{
+  background: url("../images/pause.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+/*Some Responsive CSS */
+@media screen and (max-width:767px) {
+	.skdslider .slide-desc > h2 {
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	
+	.skdslider .slide-desc > p {
+		font-size: 14px;
+		line-height: 15px;
+		margin-top: 5px;
+	}
+	.skdslider .slide-desc > p a.more {
+		font-size:14px;
+	}
+}
